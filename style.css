@@ -15,11 +15,24 @@ body {
     grid-template-areas:
       'header header'
       'nav content'
-      'footer footer';
+      'nav footer';
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 80px 1fr 70px;
 }
 
+i {
+    color: #0d5c63;
+}
+
+#logo {
+    color: #fffffa;
+    font-size: 1.2rem;
+}
+
+#github-logo {
+    color: #0d5c63;
+    font-size: 1.5rem;
+}
 
 header,
 footer,
@@ -28,27 +41,162 @@ nav {
   background-color: #44a1a0;
   color: #fffffa;
   padding: 20px;
-  border: 2px solid #0d5c63;
+  /* border: 2px solid #0d5c63; */
+}
+
+nav div i {
+    margin: 0px 10px;
 }
 
 header {
     grid-area: header;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: 25px 1fr;
+    grid-auto-flow: column;
+    align-items: center;
+    background-color: #0d5c63;
 }
 
-nav {
+.profile-picture {
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 3px solid #44a1a0;
+}
+
+.username {
+    margin-right: 10px;
+}
+
+#help-icon {
+    font-size: 1.5rem;
+    color: #fffffa;
+}
+
+#navigation {
     grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.nav-item {
+    padding: 30px 0px;
+    padding-left: 10px;
+}
+
+.nav-item:hover {
+    background-color: #0d5c63;
+}
+
+.nav-item:hover i {
+    color: #fffffa;
 }
 
 main {
     grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(min-content, max-content);
+    gap: 10px;
+    background-color: #fffffa;
 }
 
-aside {
-    grid-area: sidebar;
+.welcome-back-banner {
+    background-color: #0d5c63;
+    height: 60px;
+    grid-column: 1 / 4;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.invoice-card {
+    padding: 15px;
+    background-color: #44a1a0;
+    font-size: 1.5rem;
+}
+
+.invoice-card > p {
+    font-size: 1rem;
+}
+
+.invoice-card-amount {
+    font-size: 2rem;
+}
+
+.activity-card {
+    padding: 15px;
+    background-color: #0d5c63;
+    font-size: 1.5rem;
+}
+
+.activity-card p {
+    font-size: 1.2rem;
+}
+
+.upcoming-sessions {
+    padding: 15px;
+    background-color: #44a1a0;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    grid-column: 3;
+    grid-row: 2 / 5;
+}
+
+.session-item {
+    padding: 15px;
+    background-color: #fffffa;
+    color: #0d5c63;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.session-title {
+    font-size: 1.3rem;
+    margin-left: 10px;
+}
+
+.session-time {
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+.day-holder {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #44a1a0;
+    color: #fffffa;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    font-size: 1.2rem;
+}
+
+.news {
+    padding: 15px;
+    background-color: #0d5c63;
+    font-size: 1.5rem;
+    grid-column: 1 / 3;
+}
+
+.news-message {
+    border: 2px solid #fffffa;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-top: 10px;
 }
 
 footer {
     grid-area: footer;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #fffffa;
+    color: #0d5c63
 }

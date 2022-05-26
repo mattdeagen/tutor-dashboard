@@ -10,13 +10,17 @@
 </head>
 <body>
     <header>
+        
+        <i class="fa-solid fa-pencil" style="display: inline;" id="logo"></i>
         <h1>Tutor Dashboard</h1>
         
-        <p>Doe, John</p>
-        <i class="fa-solid fa-circle-question"></i>
+        
+        <img src="img/vicky-hladynets-unsplash.jpg"  class="profile-picture" alt="profile picture - image by Vicky Hladynets">
+        <p class="username">Doe, John</p>
+        <i class="fa-solid fa-circle-question" id="help-icon"></i>
         
     </header>
-    <nav>
+    <nav id="navigation">
         <div class="nav-item">
             <i class="fa-solid fa-house"></i>
             Home
@@ -42,7 +46,82 @@
             Resources
         </div>
     </nav>
-    <main>Content</main>
-    <footer>Footer</footer>
+    <main>
+        <div class="welcome-back-banner">
+           <p>Welcome Back, <strong>John Doe!</strong></p>
+        </div>
+        <div class="invoice-card">
+            <strong>Last Invoice</strong>
+            <div class="invoice-card-amount">
+                $200
+            </div>
+            <p>Paid yesterday.</p>
+        </div>
+        <div class="activity-card">
+            <strong>Activity</strong>
+           <p>Tutor Sessions this week: <strong>4</strong></p>
+           <p>Students tutored this week: <strong>2</strong></p>
+           <p>Missed sessions this week: <strong>0</strong></p>
+        </div>
+        <div class="upcoming-sessions">
+            <strong>Upcoming Sessions</strong>
+            <div class="session-item">
+                <div class="day-holder">
+                    <script>document.write(new Date().getDate())</script>
+                </div>
+                <div class="session-details">
+                    <p class="session-title">Tutor session with Jennifer</p>
+                    <p class="session-time">2:30pm - 3:20pm</p>
+                </div>
+            </div>
+            <div class="session-item">
+                <div class="day-holder">
+                    <script>document.write(new Date().getDate())</script>
+                </div>
+                <div class="session-details">
+                    <p class="session-title">Tutor session with Cory</p>
+                    <p class="session-time">3:30pm - 4:30pm</p>
+                </div>
+            </div>
+            <div class="session-item">
+                <div class="day-holder">
+                    <script>document.write(new Date().getDate() + 1)</script>
+                </div>
+                <div class="session-details">
+                    <p class="session-title">Tutor session with Jack</p>
+                    <p class="session-time">10:30am - 11:20am</p>
+                </div>
+            </div>
+            <div class="session-item">
+                <div class="day-holder">
+                    <script>document.write(new Date().getDate() + 3)</script>
+                </div>
+                <div class="session-details">
+                    <p class="session-title">Tutor session with Erin</p>
+                    <p class="session-time">3:30pm - 4:20pm</p>
+                </div>
+            </div>
+            <div class="session-item">
+                <div class="day-holder">
+                    <script>document.write(new Date().getDate() + 3)</script>
+                </div>
+                <div class="session-details">
+                    <p class="session-title">Tutor session with Katie</p>
+                    <p class="session-time">4:30pm - 5:20pm</p>
+                </div>
+            </div>
+        </div>
+        <div class="news">
+            <strong>News</strong>
+            <div class="news-message">
+                <h2>Welcome!</h2>
+                <p>Welcome to your new tutor dashboard! Feel free to look around and get used to the interface.
+                    If you need help, you can always click the <em>help icon</em> in the top right of the screen. 
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">Copyright &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Matt Deagen <a href="https://github.com/mattdeagen"><i class="fa-brands fa-github" id="github-logo"></i></a></footer>
+
 </body>
 </html>
